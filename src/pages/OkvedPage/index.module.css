@@ -1,0 +1,14 @@
+.container {
+  width: 768px;
+  min-height: 100%;
+  padding: 120px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.itemChildrenContainer {
+  overflow: clip;
+  transition: max-height 0.3s;
+}

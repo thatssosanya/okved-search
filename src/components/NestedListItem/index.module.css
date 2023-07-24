@@ -1,0 +1,78 @@
+.container {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #BBBBBB;
+}
+
+.openableContainer {
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: #FFB30F;
+}
+
+.status {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #DDDDDD;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.status::after {
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 8px;
+  height: 16px;
+  border-color: #FFFFFF;
+  border-width: 0px 3px 3px 0px;
+  border-style: solid;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.statusSelected {
+  background-color: #297045;
+}
+
+.statusParentSelected {
+  background-color: #ABE188;
+  cursor: initial;
+}
+
+.open {
+  flex-shrink: 0;
+  align-self: flex-start;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+
+.open::after {
+  display: block;
+  position: absolute;
+  left: 16px;
+  top: 13px;
+  width: 12px;
+  height: 12px;
+  border-color: #BBBBBB;
+  border-width: 0px 3px 3px 0px;
+  border-style: solid;
+  content: "";
+  transform: rotate(225deg);
+  transition: transform 0.3s;
+}
+
+.openClosed::after {
+  transform: rotate(45deg);
+}
